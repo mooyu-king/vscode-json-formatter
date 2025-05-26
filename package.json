@@ -1,0 +1,63 @@
+{
+  "name": "json-formatter",
+  "displayName": "JSON Formatter",
+  "description": "Format JSON documents in VS Code. Also check out our online formatter at https://json-formatter.app/",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onStartupFinished",
+    "onCommand:json-formatter.openWebsite"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "json-formatter.openWebsite",
+        "title": "Open JSON Formatter Online",
+        "category": "JSON Formatter"
+      }
+    ],
+    "languages": [
+      {
+          "id": "json",
+          "extensions": [".json"],
+          "aliases": ["JSON"]
+      }
+  ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^16.x.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.x.x",
+    "@typescript-eslint/parser": "^5.x.x",
+    "eslint": "^8.x.x",
+    "mocha": "^10.0.0",
+    "typescript": "^4.x.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vscode-json-formatter"
+  },
+  "keywords": [
+    "json",
+    "formatter",
+    "beautifier",
+    "pretty print"
+  ]
+}
