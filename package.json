@@ -1,9 +1,20 @@
 {
-  "name": "json-formatter",
-  "displayName": "JSON Formatter",
+  "name": "json-formatter-myUniqueExtension",
+  "displayName": "JSON Formatter - My Unique Extension",
   "description": "Format JSON documents in VS Code. Also check out our online formatter at https://json-formatter.app/",
   "version": "0.0.1",
-  "publisher": "your-publisher-name",
+  "publisher": "json-formatter-online",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mooyu-king/vscode-json-formatter.git"
+  },
+  "license": "MIT",
+  "keywords": [
+      "json",
+      "formatter",
+      "json formatter",
+      "online free"
+  ],
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -13,7 +24,7 @@
   "activationEvents": [
     "onLanguage:json",
     "onStartupFinished",
-    "onCommand:json-formatter.openWebsite"
+    "onCommand:json-formatter.format"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -49,15 +60,5 @@
     "eslint": "^8.x.x",
     "mocha": "^10.0.0",
     "typescript": "^4.x.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/vscode-json-formatter"
-  },
-  "keywords": [
-    "json",
-    "formatter",
-    "beautifier",
-    "pretty print"
-  ]
+  }
 }
